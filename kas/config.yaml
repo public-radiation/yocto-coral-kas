@@ -32,6 +32,10 @@ repos:
       meta-networking:
       meta-multimedia:
       meta-filesystems:
+    patches:
+      0002_force_install_npm_dev_for_tsc.patch:
+        repo: "meta-coral"
+        path: "patches/0002_force_install_npm_dev_for_tsc.patch"
 
   meta-freescale:
     url: "https://github.com/Freescale/meta-freescale.git"
