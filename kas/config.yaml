@@ -73,8 +73,11 @@ bblayers_conf_header:
     BBFILES ?= ""
 
 local_conf_header:
-  coral-dev: |
+  standard: |
+    CONF_VERSION = "2"
+  meta-freescale: |
     ACCEPT_FSL_EULA = "1"
+  diskmon: |
     BB_DISKMON_DIRS = "\
         STOPTASKS,${TMPDIR},1G,100K \
         STOPTASKS,${DL_DIR},1G,100K \
@@ -83,10 +86,20 @@ local_conf_header:
         HALT,${TMPDIR},100M,1K \
         HALT,${DL_DIR},100M,1K \
         HALT,${SSTATE_DIR},100M,1K \
-        HALT,/tmp,10M,1K"   
-    CONF_VERSION = "2"
+        HALT,/tmp,10M,1K"
+  meta-init-system: |
     PACKAGE_CLASSES = "package_ipk"
     INIT_MANAGER = "systemd"
+  meta-coral: |  
+    IMAGE_INSTALL:append = " python3-edgetpu-examples "
+  penko: |
+    IMAGE_INSTALL:append = " omega-portal-server "
+    IMAGE_INSTALL:append = " strace openssh"
+  oldest_kernel: |
+    OLDEST_KERNEL = "5.4"
+  root_user: |
+    INHERIT += "extrausers"
+    EXTRA_USERS_PARAMS = "usermod -p '' root;"
   swupdate: |
     PREFERRED_PROVIDER_u-boot-fw-utils = "libubootenv"
     IMAGE_INSTALL:append = " \
