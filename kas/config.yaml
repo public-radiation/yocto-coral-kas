@@ -61,6 +61,10 @@ repos:
     url: "https://github.com/kraj/meta-clang.git"
     branch: scarthgap
     path: "sources/meta-clang"
+
+  meta-swupdate:
+    url : "https://github.com/sbabic/meta-swupdate.git"
+    refspec : scarthgap
     
 bblayers_conf_header:
   standard: |
@@ -83,6 +87,19 @@ local_conf_header:
     CONF_VERSION = "2"
     PACKAGE_CLASSES = "package_ipk"
     INIT_MANAGER = "systemd"
+  swupdate: |
+    PREFERRED_PROVIDER_u-boot-fw-utils = "libubootenv"
     IMAGE_INSTALL:append = " \
-      python3-edgetpu-examples \
+        liberation-fonts \
+        libubootenv-bin \
+        swupdate \
+        swupdate-progress \
+        swupdate-tools-ipc \
+        swupdate-www \
+        kernel-image \
+        kernel-modules \
     "
+    IMAGE_FSTYPES += " ext4.gz wic.gz "
+    IMAGE_BOOT_FILES += "flash.bin"
+    #IMAGE_FSTYPES_append = " ext4.gz "
+    #PREFERRED_VERSION_swupdate = "2020.04+git%"
