@@ -24,9 +24,9 @@ repos:
       meta:
       meta-poky:
     patches:
-      0002_force_install_npm_dev_for_tsc.patch:
+      0004_apply_poky_fetc_patchset.patch:
         repo: "meta-coral"
-        path: "patches/0002_force_install_npm_dev_for_tsc.patch"
+        path: "patches/0004_apply_poky_fetc_patchset.patch"
 
   meta-openembedded:
     url: http://git.openembedded.org/meta-openembedded
@@ -122,6 +122,7 @@ local_conf_header:
         swupdate-progress \
         swupdate-tools-ipc \
         swupdate-www \
+        kernel-devicetree \
         kernel-image \
         kernel-modules \
     "
