@@ -75,7 +75,7 @@ repos:
 
   meta-swupdate:
     url : "https://github.com/sbabic/meta-swupdate.git"
-    refspec : scarthgap
+    branch : scarthgap
     path: "sources/meta-swupdate"
     commit: "3421a7063a58e4e027130326ab3acccbe3230b30"
     
