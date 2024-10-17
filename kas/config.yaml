@@ -11,6 +11,7 @@ repos:
     url: "https://git.openembedded.org/bitbake"
     branch: "2.8"
     path: sources/bitbake
+    commit: "d251668d9a7a8dd25bd8767efb30d6d9ff8b1ad3"
     layers:
       .: excluded
  
@@ -18,6 +19,7 @@ repos:
     url: "git://git.yoctoproject.org/poky"
     branch: scarthgap
     path: "sources/poky"
+    commit: "2034fc38eb4e63984d9bd6b260aa1bf95ce562e4"
     layers:
       meta:
       meta-poky:
@@ -30,6 +32,7 @@ repos:
     url: http://git.openembedded.org/meta-openembedded
     path: "sources/meta-openembedded"
     branch: scarthgap
+    commit: "735ae0310870ffce07ce0c55c4f87c20ac161ff9"
     layers:
       meta-oe:
       meta-python:
@@ -40,6 +43,7 @@ repos:
   meta-freescale:
     url: "https://github.com/Freescale/meta-freescale.git"
     branch: scarthgap
+    commit: "7e2d72128f06568d2359d4fbe8f9c18e1295ea38"
     path: "sources/meta-freescale"
     patches:
       0001_workaround_imx-uboot-compile-issue:
@@ -50,11 +54,13 @@ repos:
     url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
     branch: scarthgap
     path: "sources/meta-freescale-3rdparty"
+    commit: "6c063450d464eb2f380443c7d9af1b94ce9b9d75"
  
   meta-freescale-distro:
     url: "https://github.com/Freescale/meta-freescale-distro.git"
     branch: scarthgap
     path: "sources/meta-freescale-distro"
+    commit: "b9d6a5d9931922558046d230c1f5f4ef6ee72345"
   
   meta-coral:
     url: "https://github.com/public-radiation/meta-coral.git"
@@ -65,10 +71,13 @@ repos:
     url: "https://github.com/kraj/meta-clang.git"
     branch: scarthgap
     path: "sources/meta-clang"
+    commit: "2b7433611d80f6d0ee1b04156fa91fc73d3c2665"
 
   meta-swupdate:
     url : "https://github.com/sbabic/meta-swupdate.git"
     refspec : scarthgap
+    path: "sources/meta-swupdate"
+    commit: "3421a7063a58e4e027130326ab3acccbe3230b30"
     
 bblayers_conf_header:
   standard: |
