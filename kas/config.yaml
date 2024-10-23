@@ -45,10 +45,6 @@ repos:
     branch: scarthgap
     commit: "7e2d72128f06568d2359d4fbe8f9c18e1295ea38"
     path: "sources/meta-freescale"
-    patches:
-      0001_workaround_imx-uboot-compile-issue:
-        repo: "meta-coral"
-        path: "patches/0001_workaround_imx-uboot-compile-issue.patch"
 
   meta-freescale-3rdparty:
     url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
