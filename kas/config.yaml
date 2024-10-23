@@ -129,6 +129,7 @@ local_conf_header:
         kernel-devicetree \
         kernel-image \
         kernel-modules \
+        e2fsprogs-resize2fs \
     "
     IMAGE_FSTYPES += " ext4.gz wic.gz "
     IMAGE_BOOT_FILES += "flash.bin"
