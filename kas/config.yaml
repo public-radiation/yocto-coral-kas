@@ -102,8 +102,16 @@ local_conf_header:
   meta-coral: |  
     IMAGE_INSTALL:append = " python3-edgetpu-examples "
   penko: |
-    IMAGE_INSTALL:append = " omega-portal-server "
-    IMAGE_INSTALL:append = " strace openssh"
+    IMAGE_INSTALL:append = " \
+        omega-portal-server \
+        strace openssh \
+        util-linux-findmnt \
+        7z \
+        file \
+        jq \
+        curl \
+        socat \
+    "
   oldest_kernel: |
     OLDEST_KERNEL = "5.4"
   root_user: |
