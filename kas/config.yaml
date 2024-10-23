@@ -57,17 +57,17 @@ repos:
     branch: scarthgap
     path: "sources/meta-freescale-distro"
     commit: "b9d6a5d9931922558046d230c1f5f4ef6ee72345"
-  
-  meta-coral:
-    url: "https://github.com/public-radiation/meta-coral.git"
-    branch: master
-    path: "sources/meta-coral"
 
   meta-clang:
     url: "https://github.com/kraj/meta-clang.git"
     branch: scarthgap
     path: "sources/meta-clang"
     commit: "2b7433611d80f6d0ee1b04156fa91fc73d3c2665"
+
+  meta-coral:
+    url: "https://github.com/public-radiation/meta-coral.git"
+    branch: master
+    path: "sources/meta-coral"
 
   meta-swupdate:
     url : "https://github.com/sbabic/meta-swupdate.git"
