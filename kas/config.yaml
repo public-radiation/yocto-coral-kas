@@ -101,9 +101,8 @@ local_conf_header:
     INIT_MANAGER = "systemd"
   meta-coral: |  
     IMAGE_INSTALL:append = " python3-edgetpu-examples "
-  penko: |
+  generic-software: |
     IMAGE_INSTALL:append = " \
-        omega-portal-server \
         strace openssh \
         util-linux-findmnt \
         7z \
@@ -111,6 +110,8 @@ local_conf_header:
         jq \
         curl \
         socat \
+        vim \
+        figlet \
     "
   oldest_kernel: |
     OLDEST_KERNEL = "5.4"
